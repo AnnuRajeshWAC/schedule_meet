@@ -33,7 +33,7 @@ export const useCalendarData = () => {
   const now = Date.now();  
   const events = meetings?.data.filter(
       (item) => new Date(item.end).getTime() >= now
-  ).concat(holidays.data)
+  ).concat(holidays?.data)
   console.log(events);
   
   const [show, setShow] = useState(false);
