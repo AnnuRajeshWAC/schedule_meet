@@ -1,0 +1,4 @@
+.custom-calendar .rbc-month-view {
+    position: relative;
+    z-index: -10;
+}
