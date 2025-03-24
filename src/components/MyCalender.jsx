@@ -40,9 +40,8 @@ const MyCalender = () => {
     );
   return (
     <div
-      style={{ height: "800px",pointerEvents:"all" }}
+      style={{ height: "800px", pointerEvents: "all" }}
       className="relative  px-3 mt-20 mx-10 -bg-conic "
-      
     >
       <Calendar
         className=""
@@ -113,8 +112,10 @@ const CustomEventContainerWrapper = ({ children }) => {
   return <div className="p-0 ">{children}</div>;
 };
 const eventPropGetter = (event) => {
-  return {style:{
-    backgroundColor:'black',
-    color:'white'
-  }}
+  return {
+    style: {
+      backgroundColor: "black",
+      color: "white",
+    },
+  };
 };
