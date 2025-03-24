@@ -31,10 +31,12 @@ export const useCalendarData = () => {
   //   (item) => new Date(item.end) >= new Date(Date.now)
   // );
   const now = Date.now();  
-  const ievents = meetings?.data.filter(
+  const events = meetings?.data.filter(
       (item) => new Date(item.end).getTime() >= now
   );
-  const events=[...ievents,...(holidays||[])]
+  // const events=[...ievents,...(holidays||[])]
+  console.log(events);
+  
   const [show, setShow] = useState(false);
   const [currentView, setCurrentView] = useState("month");
   const [currentDate, setCurrentDate] = useState(new Date());
