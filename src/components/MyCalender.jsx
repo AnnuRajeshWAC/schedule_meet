@@ -34,7 +34,7 @@ const MyCalender = () => {
   } = useCalendarData();
   if (isLoading)
     return (
-      <div>
+      <div className="container mx-auto flex justify-center items-center mt-32">
         <Spinner />
       </div>
     );
