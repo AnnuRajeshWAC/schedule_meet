@@ -21,13 +21,20 @@ export const useCalendarData = () => {
     revalidateOnFocus: false,
   
   });
+  const {
+    data: holidays,
+  } = useSWR(`${import.meta.env.VITE_BASE_URL}/holidays`, {
+    revalidateOnFocus: false,
+  
+  });
   // const events = meetings?.data.filter(
   //   (item) => new Date(item.end) >= new Date(Date.now)
   // );
   const now = Date.now();  
-  const events = meetings?.data.filter(
+  const ievents = meetings?.data.filter(
       (item) => new Date(item.end).getTime() >= now
   );
+  const events=[...ievents,...(holidays||[])]
   const [show, setShow] = useState(false);
   const [currentView, setCurrentView] = useState("month");
   const [currentDate, setCurrentDate] = useState(new Date());
