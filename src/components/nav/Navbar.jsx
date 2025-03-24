@@ -35,10 +35,10 @@ const Navbar = () => {
               />
             </div>
 
-            <div className="absolute hidden group-hover:block top-12  transform h-fit -left-40 bg-black text-white text-center  rounded-lg shadow-lg z-50">
+            {/* <div className="absolute hidden group-hover:block top-12  transform h-fit -left-40 bg-black text-white text-center  rounded-lg shadow-lg z-50">
               <p className="font-bold">{user.name}</p>
               <p className="font-light">{user.email}</p>
-            </div>
+            </div> */}
           </div>
           <button
             className="text-xs h-fit bg-black text-white px-5 py-1 cursor-pointer"

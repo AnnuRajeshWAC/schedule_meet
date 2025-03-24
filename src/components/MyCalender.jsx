@@ -40,12 +40,12 @@ const MyCalender = () => {
     );
   return (
     <div
-      style={{ height: "800px",pointerEvents:"auto" }}
-      className="  px-3 mt-20 mx-10 -bg-conic -z-10 "
+      style={{ height: "800px",pointerEvents:"all" }}
+      className="relative  px-3 mt-20 mx-10 -bg-conic "
       
     >
       <Calendar
-        className="-z-10"
+        className=""
         localizer={localizer}
         events={events?.length > 0 ? events : []}
         startAccessor={(event) => new Date(event.start)}
